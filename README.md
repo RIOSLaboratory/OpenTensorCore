@@ -50,6 +50,34 @@ The design incurs minimal overhead and will future supports extensions for forma
 
  
 
+| **分类**         | **模块**                                            | **描述**                                                     |
+| ---------------- | --------------------------------------------------- | ------------------------------------------------------------ |
+| **顶层**         | tensor_core.v                                       | 张量核心顶层设计模块                                         |
+|                  | tensor_core_exev.v                                  | 张量核心顶层设计模块(最顶层)，多线程调度和结果汇总           |
+| **格式转换**     | to_fp8_con.v                                        | FP8格式转换器（顶层接口）                                    |
+|                  | to_fp8_core.v                                       | FP8格式转换核心逻辑模块(最后是转化为FP9)                     |
+|                  | fp22_to_fp8_con.v                                   | FP22格式到FP8格式的专用转换器                                |
+| **张量计算**     | tc_dot_product.v                                    | 点积计算单元（核心计算模块）                                 |
+|                  | tc_mul_pipe.v                                       | 乘法流水线模块，3级流水线，集成fmul_s1/2/3                   |
+|                  | tc_add_pipe.v                                       | 加法流水线模块，2级流水线                                    |
+|                  | naivemultiplier.v                                   | 基础尾数乘法器（组合逻辑）                                   |
+| **浮点运算单元** | fadd_s1.v                                           | 浮点加法器第一阶段，接收tc_mul的累加中间值，操作数对齐和特殊值处理 |
+|                  | fadd_s2.v                                           | 浮点加法器第二阶段，尾数相加和结果规格化                     |
+|                  | fmul_s1.v                                           | 浮点乘法器第一阶段，接收来自tc_mul_pipe的输入，指数处理和尾数预处理 |
+|                  | fmul_s2.v                                           | 浮点乘法器第二阶段，调用naivemultiplier.v生成部分积，进行压缩处理 |
+|                  | fmul_s3.v                                           | 浮点乘法器第三阶段，最终结果规格化和舍入，输出到tc_mul_pipe的结果总线 |
+| **辅助计算**     | [cf_math_pkg.sv](http://cf_math_pkg.sv)             | 数学函数和常数定义包                                         |
+|                  | [norm_div_sqrt_mvp.sv](http://norm_div_sqrt_mvp.sv) | 支持乘法的归一化/除法/平方根计算模块                         |
+| **存储单元**     | singleport_SRAM.v                                   | 单端口SRAM存储器模型                                         |
+| **配置与控制**   | config_registers.v                                  | 配置寄存器模块                                               |
+| **项目支撑**     | [define.sv](http://define.sv)                       | 全局宏定义文件                                               |
+|                  | filelist.f                                          | 项目文件列表（用于编译/仿真）                                |
+|                  | run.tcl                                             | 自动化运行脚本                                               |
+| **日志文件**     | command.log                                         | 命令执行历史日志                                             |
+|                  | scl.log                                             | 脚本运行日志                                                 |
+| **其他文件**     | default.svf                                         | 默认配置文件                                                 |
+|                  | qrd_mvp.pvk                                         | 未知                                                         |
+
 #### **Related Resources**
 
  OpenRVGPUCourese    https://github.com/chenweiphd/OpenRVGPUCourse
