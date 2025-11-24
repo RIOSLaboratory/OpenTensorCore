@@ -1,0 +1,89 @@
+Command: vcs -full64 -sverilog +v2k -debug_access+all +incdir+define.v ../../../src/v0p1/tensor_core.v \
+../../top/tb_tensor_core.v ../../../src/v0p1/filelist.f -o tensor_core_simv -l ../../log/compile_tensor_core.log \
+
+                         Chronologic VCS (TM)
+       Version O-2018.09-SP2_Full64 -- Sat Nov 15 17:38:21 2025
+               Copyright (c) 1991-2018 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+Parsing design file '../../../src/v0p1/tensor_core.v'
+Parsing included file 'define.v'.
+Back to file '../../../src/v0p1/tensor_core.v'.
+Parsing design file '../../top/tb_tensor_core.v'
+Parsing included file 'define.v'.
+Back to file '../../top/tb_tensor_core.v'.
+Parsing design file '../../../src/v0p1/filelist.f'
+Top Level Modules:
+       tb_tensor_core
+TimeScale is 1 ns / 1 ns
+
+Error-[URMI] Unresolved modules
+../../../src/v0p1/tensor_core.v, 67
+" tc_dot_product #(.SHAPE_K(SHAPE_K), .EXPWIDTH(EXPWIDTH), .PRECISION(PRECISION)) A1[0].A2[0].U_tc_array( .clk (clk),  .rst_n (rst_n),  .a_i (a_i[((((0 + 1) * SHAPE_K) * 9) - 1):((0 * SHAPE_K) * 9)]),  .b_i (b_i[((((0 + 1) * SHAPE_K) * 9) - 1):((0 * SHAPE_K) * 9)]),  .c_i (c_i[(((((0 * SHAPE_N) + 0) + 1) * 8) - 1):(((0 * SHAPE_N) + 0) * 8)]),  .rm_i (rm_i[2:0]),  .ctrl_reg_idxw_i (A1[0].A2[0].ctrl_reg_idxw_i),  .ctrl_warpid_i (A1[0].A2[0].ctrl_warpid_i),  .type_ab (type_ab),  .type_ab_sub (type_ab_sub),  .type_cd (type_cd),  .in_valid_i (in_valid_i),  .out_ready_i (out_ready_i),  .in_ready_o (tc_array_in_ready[((0 * SHAPE_N) + 0)]),  .out_valid_o (tc_array_out_valid[((0 * SHAPE_N) + 0)]),  .result_o (result_o[(((((0 * SHAPE_N) + 0) + 1) * 8) - 1):(((0 *  ... "
+  Module definition of above instance is not found in the design.
+
+
+Error-[URMI] Unresolved modules
+../../../src/v0p1/tensor_core.v, 67
+" tc_dot_product #(.SHAPE_K(SHAPE_K), .EXPWIDTH(EXPWIDTH), .PRECISION(PRECISION)) A1[0].A2[1].U_tc_array( .clk (clk),  .rst_n (rst_n),  .a_i (a_i[((((0 + 1) * SHAPE_K) * 9) - 1):((0 * SHAPE_K) * 9)]),  .b_i (b_i[((((1 + 1) * SHAPE_K) * 9) - 1):((1 * SHAPE_K) * 9)]),  .c_i (c_i[(((((0 * SHAPE_N) + 1) + 1) * 8) - 1):(((0 * SHAPE_N) + 1) * 8)]),  .rm_i (rm_i[2:0]),  .ctrl_reg_idxw_i (A1[0].A2[1].ctrl_reg_idxw_i),  .ctrl_warpid_i (A1[0].A2[1].ctrl_warpid_i),  .type_ab (type_ab),  .type_ab_sub (type_ab_sub),  .type_cd (type_cd),  .in_valid_i (in_valid_i),  .out_ready_i (out_ready_i),  .in_ready_o (tc_array_in_ready[((0 * SHAPE_N) + 1)]),  .out_valid_o (tc_array_out_valid[((0 * SHAPE_N) + 1)]),  .result_o (result_o[(((((0 * SHAPE_N) + 1) + 1) * 8) - 1):(((0 *  ... "
+  Module definition of above instance is not found in the design.
+
+
+Error-[URMI] Unresolved modules
+../../../src/v0p1/tensor_core.v, 67
+" tc_dot_product #(.SHAPE_K(SHAPE_K), .EXPWIDTH(EXPWIDTH), .PRECISION(PRECISION)) A1[0].A2[2].U_tc_array( .clk (clk),  .rst_n (rst_n),  .a_i (a_i[((((0 + 1) * SHAPE_K) * 9) - 1):((0 * SHAPE_K) * 9)]),  .b_i (b_i[((((2 + 1) * SHAPE_K) * 9) - 1):((2 * SHAPE_K) * 9)]),  .c_i (c_i[(((((0 * SHAPE_N) + 2) + 1) * 8) - 1):(((0 * SHAPE_N) + 2) * 8)]),  .rm_i (rm_i[2:0]),  .ctrl_reg_idxw_i (A1[0].A2[2].ctrl_reg_idxw_i),  .ctrl_warpid_i (A1[0].A2[2].ctrl_warpid_i),  .type_ab (type_ab),  .type_ab_sub (type_ab_sub),  .type_cd (type_cd),  .in_valid_i (in_valid_i),  .out_ready_i (out_ready_i),  .in_ready_o (tc_array_in_ready[((0 * SHAPE_N) + 2)]),  .out_valid_o (tc_array_out_valid[((0 * SHAPE_N) + 2)]),  .result_o (result_o[(((((0 * SHAPE_N) + 2) + 1) * 8) - 1):(((0 *  ... "
+  Module definition of above instance is not found in the design.
+
+
+Error-[URMI] Unresolved modules
+../../../src/v0p1/tensor_core.v, 67
+" tc_dot_product #(.SHAPE_K(SHAPE_K), .EXPWIDTH(EXPWIDTH), .PRECISION(PRECISION)) A1[0].A2[3].U_tc_array( .clk (clk),  .rst_n (rst_n),  .a_i (a_i[((((0 + 1) * SHAPE_K) * 9) - 1):((0 * SHAPE_K) * 9)]),  .b_i (b_i[((((3 + 1) * SHAPE_K) * 9) - 1):((3 * SHAPE_K) * 9)]),  .c_i (c_i[(((((0 * SHAPE_N) + 3) + 1) * 8) - 1):(((0 * SHAPE_N) + 3) * 8)]),  .rm_i (rm_i[2:0]),  .ctrl_reg_idxw_i (A1[0].A2[3].ctrl_reg_idxw_i),  .ctrl_warpid_i (A1[0].A2[3].ctrl_warpid_i),  .type_ab (type_ab),  .type_ab_sub (type_ab_sub),  .type_cd (type_cd),  .in_valid_i (in_valid_i),  .out_ready_i (out_ready_i),  .in_ready_o (tc_array_in_ready[((0 * SHAPE_N) + 3)]),  .out_valid_o (tc_array_out_valid[((0 * SHAPE_N) + 3)]),  .result_o (result_o[(((((0 * SHAPE_N) + 3) + 1) * 8) - 1):(((0 *  ... "
+  Module definition of above instance is not found in the design.
+
+
+Error-[URMI] Unresolved modules
+../../../src/v0p1/tensor_core.v, 67
+" tc_dot_product #(.SHAPE_K(SHAPE_K), .EXPWIDTH(EXPWIDTH), .PRECISION(PRECISION)) A1[0].A2[4].U_tc_array( .clk (clk),  .rst_n (rst_n),  .a_i (a_i[((((0 + 1) * SHAPE_K) * 9) - 1):((0 * SHAPE_K) * 9)]),  .b_i (b_i[((((4 + 1) * SHAPE_K) * 9) - 1):((4 * SHAPE_K) * 9)]),  .c_i (c_i[(((((0 * SHAPE_N) + 4) + 1) * 8) - 1):(((0 * SHAPE_N) + 4) * 8)]),  .rm_i (rm_i[2:0]),  .ctrl_reg_idxw_i (A1[0].A2[4].ctrl_reg_idxw_i),  .ctrl_warpid_i (A1[0].A2[4].ctrl_warpid_i),  .type_ab (type_ab),  .type_ab_sub (type_ab_sub),  .type_cd (type_cd),  .in_valid_i (in_valid_i),  .out_ready_i (out_ready_i),  .in_ready_o (tc_array_in_ready[((0 * SHAPE_N) + 4)]),  .out_valid_o (tc_array_out_valid[((0 * SHAPE_N) + 4)]),  .result_o (result_o[(((((0 * SHAPE_N) + 4) + 1) * 8) - 1):(((0 *  ... "
+  Module definition of above instance is not found in the design.
+
+
+Error-[URMI] Unresolved modules
+../../../src/v0p1/tensor_core.v, 67
+" tc_dot_product #(.SHAPE_K(SHAPE_K), .EXPWIDTH(EXPWIDTH), .PRECISION(PRECISION)) A1[0].A2[5].U_tc_array( .clk (clk),  .rst_n (rst_n),  .a_i (a_i[((((0 + 1) * SHAPE_K) * 9) - 1):((0 * SHAPE_K) * 9)]),  .b_i (b_i[((((5 + 1) * SHAPE_K) * 9) - 1):((5 * SHAPE_K) * 9)]),  .c_i (c_i[(((((0 * SHAPE_N) + 5) + 1) * 8) - 1):(((0 * SHAPE_N) + 5) * 8)]),  .rm_i (rm_i[2:0]),  .ctrl_reg_idxw_i (A1[0].A2[5].ctrl_reg_idxw_i),  .ctrl_warpid_i (A1[0].A2[5].ctrl_warpid_i),  .type_ab (type_ab),  .type_ab_sub (type_ab_sub),  .type_cd (type_cd),  .in_valid_i (in_valid_i),  .out_ready_i (out_ready_i),  .in_ready_o (tc_array_in_ready[((0 * SHAPE_N) + 5)]),  .out_valid_o (tc_array_out_valid[((0 * SHAPE_N) + 5)]),  .result_o (result_o[(((((0 * SHAPE_N) + 5) + 1) * 8) - 1):(((0 *  ... "
+  Module definition of above instance is not found in the design.
+
+
+Error-[URMI] Unresolved modules
+../../../src/v0p1/tensor_core.v, 67
+" tc_dot_product #(.SHAPE_K(SHAPE_K), .EXPWIDTH(EXPWIDTH), .PRECISION(PRECISION)) A1[0].A2[6].U_tc_array( .clk (clk),  .rst_n (rst_n),  .a_i (a_i[((((0 + 1) * SHAPE_K) * 9) - 1):((0 * SHAPE_K) * 9)]),  .b_i (b_i[((((6 + 1) * SHAPE_K) * 9) - 1):((6 * SHAPE_K) * 9)]),  .c_i (c_i[(((((0 * SHAPE_N) + 6) + 1) * 8) - 1):(((0 * SHAPE_N) + 6) * 8)]),  .rm_i (rm_i[2:0]),  .ctrl_reg_idxw_i (A1[0].A2[6].ctrl_reg_idxw_i),  .ctrl_warpid_i (A1[0].A2[6].ctrl_warpid_i),  .type_ab (type_ab),  .type_ab_sub (type_ab_sub),  .type_cd (type_cd),  .in_valid_i (in_valid_i),  .out_ready_i (out_ready_i),  .in_ready_o (tc_array_in_ready[((0 * SHAPE_N) + 6)]),  .out_valid_o (tc_array_out_valid[((0 * SHAPE_N) + 6)]),  .result_o (result_o[(((((0 * SHAPE_N) + 6) + 1) * 8) - 1):(((0 *  ... "
+  Module definition of above instance is not found in the design.
+
+
+Error-[URMI] Unresolved modules
+../../../src/v0p1/tensor_core.v, 67
+" tc_dot_product #(.SHAPE_K(SHAPE_K), .EXPWIDTH(EXPWIDTH), .PRECISION(PRECISION)) A1[0].A2[7].U_tc_array( .clk (clk),  .rst_n (rst_n),  .a_i (a_i[((((0 + 1) * SHAPE_K) * 9) - 1):((0 * SHAPE_K) * 9)]),  .b_i (b_i[((((7 + 1) * SHAPE_K) * 9) - 1):((7 * SHAPE_K) * 9)]),  .c_i (c_i[(((((0 * SHAPE_N) + 7) + 1) * 8) - 1):(((0 * SHAPE_N) + 7) * 8)]),  .rm_i (rm_i[2:0]),  .ctrl_reg_idxw_i (A1[0].A2[7].ctrl_reg_idxw_i),  .ctrl_warpid_i (A1[0].A2[7].ctrl_warpid_i),  .type_ab (type_ab),  .type_ab_sub (type_ab_sub),  .type_cd (type_cd),  .in_valid_i (in_valid_i),  .out_ready_i (out_ready_i),  .in_ready_o (tc_array_in_ready[((0 * SHAPE_N) + 7)]),  .out_valid_o (tc_array_out_valid[((0 * SHAPE_N) + 7)]),  .result_o (result_o[(((((0 * SHAPE_N) + 7) + 1) * 8) - 1):(((0 *  ... "
+  Module definition of above instance is not found in the design.
+
+
+Error-[URMI] Unresolved modules
+../../../src/v0p1/tensor_core.v, 67
+" tc_dot_product #(.SHAPE_K(SHAPE_K), .EXPWIDTH(EXPWIDTH), .PRECISION(PRECISION)) A1[1].A2[0].U_tc_array( .clk (clk),  .rst_n (rst_n),  .a_i (a_i[((((1 + 1) * SHAPE_K) * 9) - 1):((1 * SHAPE_K) * 9)]),  .b_i (b_i[((((0 + 1) * SHAPE_K) * 9) - 1):((0 * SHAPE_K) * 9)]),  .c_i (c_i[(((((1 * SHAPE_N) + 0) + 1) * 8) - 1):(((1 * SHAPE_N) + 0) * 8)]),  .rm_i (rm_i[2:0]),  .ctrl_reg_idxw_i (A1[1].A2[0].ctrl_reg_idxw_i),  .ctrl_warpid_i (A1[1].A2[0].ctrl_warpid_i),  .type_ab (type_ab),  .type_ab_sub (type_ab_sub),  .type_cd (type_cd),  .in_valid_i (in_valid_i),  .out_ready_i (out_ready_i),  .in_ready_o (tc_array_in_ready[((1 * SHAPE_N) + 0)]),  .out_valid_o (tc_array_out_valid[((1 * SHAPE_N) + 0)]),  .result_o (result_o[(((((1 * SHAPE_N) + 0) + 1) * 8) - 1):(((1 *  ... "
+  Module definition of above instance is not found in the design.
+
+
+Error-[URMI] Unresolved modules
+../../../src/v0p1/tensor_core.v, 67
+" tc_dot_product #(.SHAPE_K(SHAPE_K), .EXPWIDTH(EXPWIDTH), .PRECISION(PRECISION)) A1[1].A2[1].U_tc_array( .clk (clk),  .rst_n (rst_n),  .a_i (a_i[((((1 + 1) * SHAPE_K) * 9) - 1):((1 * SHAPE_K) * 9)]),  .b_i (b_i[((((1 + 1) * SHAPE_K) * 9) - 1):((1 * SHAPE_K) * 9)]),  .c_i (c_i[(((((1 * SHAPE_N) + 1) + 1) * 8) - 1):(((1 * SHAPE_N) + 1) * 8)]),  .rm_i (rm_i[2:0]),  .ctrl_reg_idxw_i (A1[1].A2[1].ctrl_reg_idxw_i),  .ctrl_warpid_i (A1[1].A2[1].ctrl_warpid_i),  .type_ab (type_ab),  .type_ab_sub (type_ab_sub),  .type_cd (type_cd),  .in_valid_i (in_valid_i),  .out_ready_i (out_ready_i),  .in_ready_o (tc_array_in_ready[((1 * SHAPE_N) + 1)]),  .out_valid_o (tc_array_out_valid[((1 * SHAPE_N) + 1)]),  .result_o (result_o[(((((1 * SHAPE_N) + 1) + 1) * 8) - 1):(((1 *  ... "
+  Module definition of above instance is not found in the design.
+
+
+Note-[MAX_ERROR_COUNT] Maximum error count reached
+  Current number of errors has reached the default maximum error count (10).
+  Please use +error+<count> to increase the limit.
+
+10 errors
+CPU time: .089 seconds to compile

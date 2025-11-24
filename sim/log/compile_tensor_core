@@ -1,0 +1,70 @@
+Command: vcs -full64 -sverilog +v2k -debug_access+all +incdir+define.v ../../../src/v0p1/tensor_core.v \
+../../top/tb_tensor_core.v ../../../src/v0p1/filelist.f -o tensor_core_simv -l ../../log/compile_tensor_core \
+
+                         Chronologic VCS (TM)
+       Version O-2018.09-SP2_Full64 -- Sat Nov 15 17:21:54 2025
+               Copyright (c) 1991-2018 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+Parsing design file '../../../src/v0p1/tensor_core.v'
+Parsing included file 'define.v'.
+Back to file '../../../src/v0p1/tensor_core.v'.
+
+Error-[NCE] Non-constant expression
+  The following expression should be a constant.
+  Expression: tc_array_out_valid[((i * SHAPE_N) + j)]
+  "../../../src/v0p1/tensor_core.v", 105
+  Source info: tensor_core_exe #(.ut_valid_o    
+  (tc_array_out_valid[i*SHAPE_N+j]                                            
+  ),
+
+
+Error-[NCE] Non-constant expression
+  The following expression should be a constant.
+  Expression: result_o[(((((i * SHAPE_N) + j) + 1) * 8) - 1):(((i * SHAPE_N) +
+  j) * 8)]
+  "../../../src/v0p1/tensor_core.v", 107
+  Source info:                                    .result_o       
+  (result_o[(i*SHAPE_N+j+1)*`XLEN_FP8-1:(i*SHAPE_N+j)*`XLEN_FP8]),
+
+
+Error-[NCE] Non-constant expression
+  The following expression should be a constant.
+  Expression: fflags_o[(((((i * SHAPE_N) + j) + 1) * 5) - 1):(((i * SHAPE_N) +
+  j) * 5)]
+  "../../../src/v0p1/tensor_core.v", 108
+  Source info:                                    .fflags_o       
+  (fflags_o[(i*SHAPE_N+j+1)*5-1:(i*SHAPE_N+j)*5]                              
+  ),
+
+
+Error-[NCE] Non-constant expression
+  The following expression should be a constant.
+  Expression: tc_array_ctrl_reg_idxw[((i * SHAPE_N) + j)]
+  "../../../src/v0p1/tensor_core.v", 109
+  Source info:                                    
+  .ctrl_reg_idxw_o(tc_array_ctrl_reg_idxw[i*SHAPE_N+j]                        
+  ),
+
+
+Error-[NCE] Non-constant expression
+  The following expression should be a constant.
+  Expression: tc_array_ctrl_warpid[((i * SHAPE_N) + j)]
+  "../../../src/v0p1/tensor_core.v", 110
+  Source info:                                    .ctrl_warpid_o  
+  (tc_array_ctrl_warpid[i*SHAPE_N+j]                                          
+  )
+
+
+Error-[SE] Syntax error
+  Following verilog source has syntax error :
+  "../../../src/v0p1/tensor_core.v", 111: token is ';'
+                                 );
+                                   ^
+
+6 errors
+CPU time: .086 seconds to compile
