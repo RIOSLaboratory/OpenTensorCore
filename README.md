@@ -1,4 +1,6 @@
 # OpenTensorCore
+![image-20251124190550818](https://raw.githubusercontent.com/chenweiphd/typopic/master/image-20251124190550818.png)
+
 ## Introduction
 
 OpenTensorCore, our groundbreaking open-source IP core designed to rival NVIDIA's Tensor Cores in AI acceleration. This IP core leverages RISC-V architecture to deliver high-performance tensor operations, particularly for deep learning workloads. It supports advanced features like low-precision computing, making it suitable for edge devices and data centers alike.
@@ -43,6 +45,8 @@ At its heart, OpenTensorCore employs a pipeline-based architecture. The core com
 ​                ● **Memory Interface Layer**: Features asynchronous access, compatible with SRAM compilers like OpenXRAM, ensuring low-latency data streaming.
 
 The design incurs minimal overhead and will future supports extensions for formats like INT4 and FP4.
+
+![image-20251124190838829](https://raw.githubusercontent.com/chenweiphd/typopic/master/image-20251124190838829.png)
 
  
 
